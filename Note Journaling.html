@@ -29,7 +29,9 @@
             document.getElementById("note_editor").value = null
         }
         function showAllNotes() {
+            // Call the stored notes from local storage
             var storedNotesString = localStorage.getItem('all_notes')
+            // Parse all notes, then display them to the webpage
             var allNotes = JSON.parse(storedNotesString)
             if (allNotes != null) {
                 var noteDisplayer = document.getElementById('display_all_notes')
