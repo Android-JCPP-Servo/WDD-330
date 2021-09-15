@@ -1,6 +1,5 @@
 * {
     background-color: lightgray;
-    border: 1px solid black;
 }
 section {
     padding: 25px;
@@ -10,7 +9,10 @@ section {
     height: auto;
     width: 400px;
 }
-h1, h2, p, ol {
+h1 {
+    text-decoration: underline;
+}
+p, ol {
     padding: 5px;
     height: auto;
     width: 350px;
