@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Journaling Group Loop</title>
+    <script>
+        // Create a function for handling notes
+        function saveNote() {
+            // Set the date, time, and description
+            var currentDateAndTime = new Date()
+            var aNoteDescription = document.getElementById('description_input').value
+            var aNoteText = document.getElementById('note_editor').value
+            var aCompleteNote = currentDateAndTime.toLocaleString() + '--' + aNoteDescription
+
+            // Show the complete note
+            aCompleteNote += "<p>" + aNoteText + "</p>"
+
+            // Parse all note information
+            var storedNotesString = localStorage.getItem('all_notes')
+            var allNotes = JSON.parse(storedNotesString)
+            // Be sure to check if there are no notes
+            if (allNotes == null) {
+                allNotes = []
+            }
+            // Stringify all note information
+            allNotes.push(aCompleteNote)
+            var allNotesString = JSON.stringify(allNotes)
+            localStorage.setItem('all_notes', allNotesString)
+        }
+    </script>
+
+    <style>
+
+    </style>
+    </head>
+
+    <body>
+        <section id="note_entry_area">
+            <h1>Note it!</h1>
+            Description: <input type="text" id="description_input"></input>
+            <textarea id="note_editor" placeholder="Note it down. Don't forget!"></textarea>
+            <button onclick="saveNote()">Save</button>
+        </section>
+        <section id="display_all_notes"></section>
+    </body>
+</html>
