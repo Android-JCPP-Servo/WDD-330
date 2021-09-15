@@ -46,13 +46,12 @@
     </style>
     </head>
 
-    <body>
+    <body onload="showAllNotes()">
         <section id="note_entry_area">
             <h1>Note it!</h1>
             Description: <input type="text" id="description_input"></input>
             <textarea id="note_editor" placeholder="Note it down. Don't forget!"></textarea>
-            <button onclick="saveNote()">Save</button>
-            <button onclick="showAllNotes()">Show All Notes</button>
+            <button onclick="saveNote(); showAllNotes()">Save</button>
         </section>
         <section id="display_all_notes"></section>
     </body>
