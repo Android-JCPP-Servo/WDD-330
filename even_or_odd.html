@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <title>Even or Odd???</title>
+  <script>
+      function checkNumber() {
+          var numberAsText = document.getElementById("number_input").value
+          var remainder = numberAsText % 2
+          if (remainder == 0) {
+              document.getElementById("display_result").innerHTML = numberAsText + " is even."
+          } else {
+              document.getElementById("display_result").innerHTML = numberAsText + " is odd."
+          }
+      }
+  </script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+	Enter a number: <input id="number_input"></input>
+    <section>
+        <button onclick="checkNumber()">Check it!</button>
+    </section>
+    <section id="display_result"></section>
+</body>
+</html>
