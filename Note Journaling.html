@@ -29,7 +29,7 @@
         function showAllNotes() {
             var storedNotesString = localStorage.getItem('all_notes')
             var allNotes = JSON.parse(storedNotesString)
-            if (allNotes == null) {
+            if (allNotes != null) {
                 var noteDisplayer = document.getElementById('display_all_notes')
                 noteDisplayer.innerHTML = null
                 var numberOfNotes = allNotes.length
