@@ -11,6 +11,11 @@ img {
     height: 15px;
 }
 
+.highlight-photo {
+    width: 100%;
+    height: auto;
+}
+
 .row::after {
     content: "";
     clear: both;
@@ -49,6 +54,10 @@ html {
 a {
     color: #ffffff;
     text-decoration: none;
+}
+
+.text {
+    color: blue;
 }
 
 .menu li:hover {
