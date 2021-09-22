@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+img {
+    color: #ffffff;
+}
+
 .row::after {
     content: "";
     clear: both;
