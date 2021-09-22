@@ -1,6 +1,9 @@
 /***********************************
  * This layout pattern is used from
  * https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_breakpoints
+ *
+ * Footer layout code is used from
+ * https://www.geeksforgeeks.org/how-to-create-footer-to-stay-at-the-bottom-of-a-web-page/
  ***********************************/
 * {
     box-sizing: border-box;
