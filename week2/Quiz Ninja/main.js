@@ -17,15 +17,13 @@ const quiz = [
 
 for (const [question,answer] of quiz) {
     const response = prompt(question);
-    response === answer ? (alert('Correct!'), score++) : alert(`Wrong! The correct answer was ${answer}`);
-    /*
+    // response === answer ? (alert('Correct!'), score++) : alert(`Wrong! The correct answer was ${answer}`);
     if (response === answer) {
         alert('Correct!');
         score++;
     } else {
         alert(`Wrong! The correct answer was ${answer}`);
     }
-    */
 }
 
 // At the end of the game, report the player's score
