@@ -27,13 +27,17 @@ img {
     padding: 15px;
 }
 
-html {
+html, body {
     font-family: "Lucida Sans", sans-serif;
+    background-color: #fff3b0;
+    color: #540b0e;
+    height: 100%;
+    margin: 0;
 }
 
 .header {
-    background-color: #9933cc;
-    color: #ffffff;
+    background-color: #335c67;
+    color: #e09f3e;
     padding: 15px;
 }
 
@@ -46,7 +50,8 @@ html {
 .menu li {
     padding: 8px;
     margin-bottom: 7px;
-    background-color: #33b5e5;
+    margin-left: 25px;
+    background-color: #9e2a2b;
     color: #ffffff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -74,11 +79,14 @@ a {
 }
 
 .footer {
-    background-color: #0099cc;
+    background-color: #335c67;
     color: #ffffff;
     text-align: center;
     font-size: 12px;
     padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 /* For desktop: */
