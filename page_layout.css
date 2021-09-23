@@ -111,4 +111,7 @@ a {
     [class*="col-"] {
         width: 100%;
     }
+    .menu li {
+        margin-right: 25px;
+    }
 }
