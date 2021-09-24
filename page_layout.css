@@ -50,7 +50,7 @@ html, body {
     padding: 0;
 }
 
-.menu li {
+.menu li, button {
     padding: 8px;
     margin-bottom: 7px;
     margin-left: 25px;
