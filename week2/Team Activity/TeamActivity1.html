@@ -8,10 +8,46 @@
     <title>Team Activity | Week 2</title>
 </head>
 <body>
-    <input type="text" id="input_text">
-    <input type="text" id="input_text_2">
-    <div id="demo"></div>
+    <div class="header"><h1>Week 2 Team Activity</h1></div>
+    <div class="row">
+        <h2>Core Requirements</h2>
+        <div class="col-4">
+            <h3>Core Requirement 1</h3>
+            <input type="text" id="input_text">
+            <button type="button" onclick="display_text()">Display Contents</button>
+            <div id="demo"></div>
+        </div>
+        <div class="col-4">
+            <h3>Core Requirement 2</h3>
+            <input type="text" id="input_number">
+            <button type="button" onclick="add_all()">Find Total</button>
+            <div id="demo_2"></div>
+        </div>
+    </div>
     <script>
+        // Requirement 1
+        function display_text() {
+            // Display text to the screen.
+            document.getElementById("demo").innerHTML = document.getElementById("input_text").value;
+        }
+        // Requirement 2
+        function add_all() {
+            // Declare variables
+            let number = parseInt(document.getElementById("input_number").value);
+            let total = 0;
+            // Check if number is a number and if it is not less than 0
+            if (typeof(number) == "number" && number > 0) {
+                // If criteria is met, calculate total of all values up to and including number
+                for (let i = 0; i <= number; i++) {
+                    total += i;
+                }
+            } else {
+                alert("Invalid number. Please enter a number greater than 0.")
+            }
+            // Return total
+            document.getElementById("demo_2").innerHTML = total;
+        }
+        /*
         // Function Declaration
         function read_contents() {
             let num = parseInt(document.getElementById("input_text").value);
