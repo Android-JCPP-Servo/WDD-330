@@ -116,6 +116,6 @@ a {
         margin-right: 25px;
     }
     html, body {
-        min-height: 200%;
+        min-height: 500px;
     }
 }
