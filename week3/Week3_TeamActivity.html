@@ -86,18 +86,27 @@
         // 3. Sort the inventors by birthdate, oldest to youngest
         const sortedBirth = inventors.sort(function(a, b) {
             if (a.year > b.year) {
-                return 1;
-            } else {
                 return -1;
+            } else {
+                return 1;
             }
         });
         console.table(sortedBirth);
 
         // Array.prototype.reduce()
         // 4. How many years did all the inventors live?
-        
+        // Resource referenced from: https://www.youtube.com/watch?v=NiLUGy1Mh4U
+        const totalYears = inventors.reduce((acc, inventor) => acc + (inventor.passed - inventor.year), 0);
+        console.log(totalYears);
 
         // 5. Sort the inventors by years lived
+        const yearsLived = inventors.sort(function(a, b) {
+            // Longest to Shortest
+            return ((a.passed - a.year) > (b.passed - b.year) ? -1 : 1);
+            // Shortest to Longest
+            // return ((a.passed - a.year) > (b.passed - b.year) ? 1 : -1);
+        });
+        console.table(yearsLived);
 
         // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
         // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -107,6 +116,8 @@
 
         // 7. sort Exercise
         // Sort the people alphabetically by last name
+        const sortedLastName = people.sort((a, b) => a.lastName > b.lastName ? -1 : 1);
+        console.table(sortedLastName);
 
         // 8. Reduce Exercise
         // Sum up the instances of each of these
@@ -126,6 +137,14 @@
             'car',
             'truck'
         ];
+
+        // Step 1: Initialize a constant to hold the new array of values.
+        // Step 2: Initialize the reduce method to count the number of instances of each item.
+        // Step 3: Begin counting, starting with the first instance of each item, then return the result.
+        // Note: Using 0 instead of prev as the initial value will only return 0.
+        // Referenced from: https://www.codegrepper.com/code-examples/javascript/javascript+count+number+of+occurrences+in+array
+        const numOccurrences = data => data.reduce((prev, curr) => (prev[curr] = ++prev[curr] || 1, prev), {});
+        console.table(numOccurrences(data));
 
         </script>
         <div id="demo"></div>
