@@ -10,8 +10,8 @@
     /*border: 1px solid black;*/
 }
 
-html {
-    min-height: 715px;
+body {
+    height: 1175px;
 }
 
 img {
