@@ -9,7 +9,9 @@ function makeHero(event) {
     event.preventDefault(); // prevent the form from being submitted
     const hero = {}; // create an empty object
     hero.name = form.heroName.value; // create a name property based on the input field's value
-    hero.realName = form.realName.value; // Create a real name property that's displays hidden text
+    hero.realName = form.realName.value; // Create a real name property that's displays hidden text    
+    // Create a list of all powers that are attached to this hero
+    hero.powers = [...form.powers].filter(box => box.checked).map(box => box.value);
     hero.category = form.category.value; // The value of the radio button that was selected is stored inform.category.value
     hero.age = form.age.value; // Receive the value for the hero's age property
     hero.city = form.city.value; // Receive the value for the hero's city property
@@ -21,7 +23,5 @@ function makeHero(event) {
     //         hero.powers.push(form.powers[i].value);
     //     }
     // }
-    // Create a list of all powers that are attached to this hero
-    hero.powers = [...form.powers].filter(box => box.checked).map(box => box.value);
     return hero;
 }

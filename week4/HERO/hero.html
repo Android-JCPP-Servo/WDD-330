@@ -8,7 +8,7 @@
     <form id='hero'>
         <!--Text Input Fields-->
         <label for='heroName'>Name:
-            <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name' maxlength=32>
+            <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name' maxlength=32 required>
         </label>
         <!--Password Input Fields-->
         <label for='realName'>Real Name:
@@ -61,6 +61,8 @@
         <label for='origin'>Origin Story:
             <textarea id='origin' name='origin' rows='20' cols='60'></textarea>
         </label>
+        <!--Buttons-->
+        <button type='reset'>Reset</button>
         <button type='submit'>Submit</button>
     </form>
 <script src='main.js'></script>
