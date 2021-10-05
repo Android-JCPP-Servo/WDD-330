@@ -3,6 +3,13 @@
 <head>
     <meta charset='utf-8'>
     <title>Hero Form</title>
+    <style>
+        .error{
+            background: #f99;
+            border: #900 1px solid;
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <form id='hero'>
@@ -63,7 +70,7 @@
         </label>
         <!--Buttons-->
         <button type='reset'>Reset</button>
-        <button type='submit'>Submit</button>
+        <button type='submit' disabled>Submit</button>
     </form>
 <script src='main.js'></script>
 </body>
