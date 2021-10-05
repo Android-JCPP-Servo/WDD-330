@@ -11,6 +11,14 @@ function makeHero(event) {
     hero.name = form.heroName.value; // create a name property based on the input field's value
     hero.realName = form.realName.value; // Create a real name property that's displays hidden text
     alert(JSON.stringify(hero)); // convert object to JSON string and display in alert dialog
+    // hero.powers = []; // Create a list of all powers that are attached to this hero
+    // for (let i=0; i < form.powers.length; i++) {
+    //     if (form.powers[i].checked) {
+    //         hero.powers.push(form.powers[i].value);
+    //     }
+    // }
+    // Create a list of all powers that are attached to this hero
+    hero.powers = [...form.powers].filter(box => box.checked).map(box => box.value);
     return hero;
 }
 // Input Fields
