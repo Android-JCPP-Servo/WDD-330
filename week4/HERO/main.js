@@ -13,6 +13,7 @@ function makeHero(event) {
     hero.category = form.category.value; // The value of the radio button that was selected is stored inform.category.value
     hero.age = form.age.value; // Receive the value for the hero's age property
     hero.city = form.city.value; // Receive the value for the hero's city property
+    hero.origin = form.origin.value; // Receive the value for the hero's origin-story property
     alert(JSON.stringify(hero)); // convert object to JSON string and display in alert dialog
     // hero.powers = []; // Create a list of all powers that are attached to this hero
     // for (let i=0; i < form.powers.length; i++) {
