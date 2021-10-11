@@ -11,7 +11,9 @@
 }
 
 body {
-    height: 1175px;
+    /* height: 1175px; */
+    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 img {
@@ -39,7 +41,6 @@ html, body {
     font-family: "Lucida Sans", sans-serif;
     background-color: #fff3b0;
     color: #540b0e;
-    margin-bottom: 100px;
     margin: 0;
 }
 
@@ -47,6 +48,9 @@ html, body {
     background-color: #335c67;
     color: #e09f3e;
     padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .buttons li {
