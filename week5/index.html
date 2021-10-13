@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../page_layout.css" media="screen">
+    <title>Assignment Index | Week 5</title>
+</head>
+<body>
+    <div class="header">
+        <a href="../index.html"><img src="../images/back_arrow.png" alt="Back"> WDD 330 Portfolio</a>
+        <h1>Week 5 Assignment Index</h1>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <h3>JEST Test Files</h3>
+            <ul class="buttons">
+                <li><a href="squareRoot.test.js">Square Root Test</a></li>
+                <li><a href="numberCruncher.test.js">Number Cruncher Test</a></li>
+            </ul>
+            <h3>QUIZ NINJA</h3>
+            <ul class="buttons">
+                <li><a href="QUIZ NINJA/chapter_10.html">QUIZ NINJA HTML</a></li>
+                <li><a href="QUIZ NINJA/main.js">QUIZ NINJA JS</a></li>
+                <li><a href="QUIZ NINJA/styles.css">QUIZ NINJA CSS</a></li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <h3>Descriptions</h3>
+            <ul>
+                <li>
+                    <i>JEST Test Files</i> - These two files implement NPM and JEST testing methods for JavaScript.
+                    <ul class="lists">
+                        <li>
+                            The Square Root Test first checks if the number provided is a non-negative, real number value. 
+                            If so, a test is run against an expected value. If the expected value matches the result, a <b>PASS</b> 
+                            statement is returned. Otherwise, a failure report is given with the error location.
+                        </li>
+                        <li>
+                            The Number Cruncher Test has three parts:
+                            <ol>
+                                <li>
+                                    All factors of a provided number are tested against an expected-value array. If both arrays 
+                                    match, a <b>PASS</b> statement is returned.
+                                </li>
+                                <li>
+                                    Each result value is checked as being either <i>prime</i> or <i>composite</i> number. If 
+                                    each number is <i>prime</i>, then a <b>PASS</b> statement is returned.
+                                </li>
+                                <li>
+                                    Several tests are performed against non-numerical, string, and negative values. If the provided number 
+                                    matches none of these listed options, a <b>PASS</b> statement is returned.
+                                </li>
+                            </ol>
+                            <p>If any of these tests fail, a failure report is given with specific error locations.</p>
+                        </li>
+                    </ul>    
+                </li>
+                <li>
+                    <i>QUIZ NINJA PROJECT</i> - This part of the project from Chapter 10 implements methods similar to JEST testing. 
+                    Rather than test the program with test() functions, the program relies on console.log() methods, displaying which 
+                    functions were activated after each user action.
+                </li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <h3>This Week's Highlights</h3>
+            <ul>
+                <li>JEST Testing - Pass and Failure Examples</li>
+                <img src="photo_highlights/JEST_test_pass_and_fail_examples.jpg" alt="JEST Testing - Pass and Failure Examples" class="highlight-photo">
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy 2021 Andersen Stewart | WDD 330 | Week 05</p>
+    </div>
+</body>
+</html>

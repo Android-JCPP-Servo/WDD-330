@@ -12,8 +12,8 @@
 
 body {
     /* height: 1175px; */
-    padding-bottom: 100px;
-    padding-top: 100px;
+    padding-bottom: 75px;
+    padding-top: 150px;
 }
 
 img {
@@ -77,6 +77,10 @@ a {
     text-decoration: none;
 }
 
+.lists li{
+    padding-top: 10px;
+}
+
 .text {
     color: blue;
 }
@@ -124,7 +128,8 @@ a {
     .buttons li {
         margin-right: 15px;
     }
-    html, body {
-        margin-bottom: 125px;
+    body {
+        padding-bottom: 100px;
+        padding-top: 125px;
     }
 }
