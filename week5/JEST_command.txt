@@ -1,0 +1,10 @@
+// Command to install JEST through Terminal
+npm install -g jest
+
+// Command to run JEST for testing purposes
+jest -c {}
+
+NOTES:
+- If the curly braces are forgotten at the end of the JEST command, an error message will be displayed.
+  The message will illustrate all possible extensions of the JEST command, and will possibly display that 
+  all test() methods are unidentified or not defined.
