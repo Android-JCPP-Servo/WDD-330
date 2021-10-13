@@ -8,3 +8,6 @@ NOTES:
 - If the curly braces are forgotten at the end of the JEST command, an error message will be displayed.
   The message will illustrate all possible extensions of the JEST command, and will possibly display that 
   all test() methods are unidentified or not defined.
+- For further tips on installing/uninstalling JEST, npm, or Node.js, visit https://phoenixnap.com/kb/install-node-js-npm-on-windows.
+- For additional extensions about JEST testing and PowerShell,
+  visit https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1
