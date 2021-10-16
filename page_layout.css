@@ -81,6 +81,10 @@ a {
     padding-top: 10px;
 }
 
+.images li {
+    padding-bottom: 10px;
+}
+
 .text {
     color: blue;
 }

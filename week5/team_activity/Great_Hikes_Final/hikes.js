@@ -2,7 +2,7 @@
 const hikeList = [
     {
       name: "Bechler Falls",
-      imgSrc: "falls.jpeg",
+      imgSrc: "falls.jpg",
       imgAlt: "Image of Bechler Falls",
       distance: "3 miles",
       difficulty: "Easy",
@@ -13,7 +13,7 @@ const hikeList = [
     },
     {
       name: "Teton Canyon",
-      imgSrc: "falls.jpeg",
+      imgSrc: "falls.jpg",
       imgAlt: "Image of Bechler Falls",
       distance: "3 miles",
       difficulty: "Easy",
@@ -23,7 +23,7 @@ const hikeList = [
     },
     {
       name: "Denanda Falls",
-      imgSrc: "falls.jpeg",
+      imgSrc: "falls.jpg",
       imgAlt: "Image of Bechler Falls",
       distance: "7 miles",
       difficulty: "Moderate",
