@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo_list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>TODO List | Week 6</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 header">
+            <div class="row">
+                <div class="col-12">
+                    <h1>To-Do List</h1>
+                    <div class="row">
+                        <div class="col-9">
+                            <input type="text" class="item_add" id="item_add" placeholder="List Title...">
+                            <p id="alert">* You must enter something. *</p>
+                        </div>
+                        <div class="col-3">
+                            <button class="add_button" onClick="addItem()">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <button class="filter_button" id="all" data-filter="all">All</button>
+                </div>
+                <div class="col-4">
+                    <button class="filter_button" id="active" data-filter="active">Active</button>
+                </div>
+                <div class="col-4">
+                    <button class="filter_button" id="completed" data-filter="completed">Completed</button>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="col-12 todo_items">
+                    <li>Respond to Internship</li>
+                    <li>Hit the Gym</li>
+                    <li>Date with Sammi</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</body>
+<script src="todo_list.js"></script>
+</html>

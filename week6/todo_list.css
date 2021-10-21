@@ -1,0 +1,127 @@
+/* Everything */
+* {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* Grid System */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* Header Section */
+.header {
+    color: white;
+    background-color: #A50000;
+    border-radius: 5px;
+    border: 10px solid black;
+}
+h1 {
+    font-size: 48px;
+    text-decoration: underline;
+}
+.item_add {
+    padding: 0.5em 0.75em 0.5em 0.75em;
+    width: 100%;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 18px;
+}
+.add_button, .filter_button {
+    padding: 0.5em 0.75em 0.5em 0.75em;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+}
+#alert {
+    visibility: hidden;
+    font-size: 18px;
+}
+
+/* List Section */
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background:#eeeeee;
+    font-size: 18px;
+    transition: 0.2s;
+    color: black;
+    text-align: left;
+    /* Make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+}
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+/* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+.close:hover {
+    background-color: #A50000;
+    color: white;
+}
