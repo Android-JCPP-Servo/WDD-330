@@ -2,8 +2,11 @@
  * TODO List JavaScript code referenced from:
  * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo
  *******************************************************************/
-// Create a "close" button and append it to each list item
+// Declare global variables
 var itemList = document.getElementsByTagName('LI');
+var totalAll = 0;
+
+// Create a "close" button and append it to each list item
 for (var i = 0; i < itemList.length; i++) {
     // @param tagName — The name of an element.
     var span = document.createElement('span');
@@ -35,8 +38,14 @@ list.addEventListener('click', function(e) {
     if (e.target.tagName === 'LI') {
         // Set the selected item to "checked off"
         e.target.classList.toggle('checked');
-        e.target.checked = true;
+        // Correctly display each filter if user "unchecks" an item
+        if (e.target.checked) {
+            e.target.checked = false;
+        } else {
+            e.target.checked = true;
+        }
     }
+    // console.log(e.target.checked);
 }, false);
 
 // Create a new list item when clicking the "Add Item" button
@@ -50,10 +59,12 @@ function addItem() {
     if (itemInput === '') {
         // If empty, display error message
         alert.style.visibility = 'visible';
+        totalAll += 0;
     } else {
         // If not empty, add new item
         alert.style.visibility = 'hidden';
         document.getElementById('todo_items').appendChild(newItem);
+        totalAll++;
     }
     document.getElementById('item_add').value = '';
     // Add 'close' symbol to the end of the item
@@ -72,6 +83,12 @@ function addItem() {
             div.style.display = "none";
         }
     }
+    // console.log('Total All: ' + totalAll);
+    if (totalAll == 1) {
+        document.getElementById("totals").innerHTML = totalAll + " task total.";
+    } else {
+        document.getElementById("totals").innerHTML = totalAll + " tasks total.";
+    }
 }
 
 // Filter each list item based on being checked off or not
@@ -80,24 +97,45 @@ function filterAllData() {
     for (var i = 0; i < itemList.length; i++) {
         itemList[i].style.display = 'block';
     }
+    console.log('Total All: ' + totalAll);
+    if (totalAll <= 1) {
+        document.getElementById("totals").innerHTML = totalAll + " task total.";
+    } else {
+        document.getElementById("totals").innerHTML = totalAll + " tasks total.";
+    }
 }
 // Display only active items
 function filterActiveData() {
+    var totalActive = 0;
     for (var i = 0; i < itemList.length; i++) {
         if (itemList[i].checked) {
             itemList[i].style.display = 'none';
         } else {
             itemList[i].style.display = 'block';
+            totalActive++;
         }
+    }
+    if (totalActive <= 1) {
+        document.getElementById("totals").innerHTML = totalActive + " task left.";
+    } else {
+        document.getElementById("totals").innerHTML = totalActive + " tasks left.";
     }
 }
 // Display only completed items
 function filterCompletedData() {
+    var totalCompleted = 0;
     for (var i = 0; i < itemList.length; i++) {
         if (itemList[i].checked) {
             itemList[i].style.display = 'block';
+            totalCompleted++;
         } else {
             itemList[i].style.display = 'none';
         }
+    }
+    //console.log('Total completed: ' + totalCompleted);
+    if (totalCompleted <= 1) {
+        document.getElementById("totals").innerHTML = totalCompleted + " task completed.";
+    } else {
+        document.getElementById("totals").innerHTML = totalCompleted + " tasks completed.";
     }
 }

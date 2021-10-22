@@ -34,6 +34,12 @@
     [class*="col-"] {
         width: 100%;
     }
+    .header {
+        min-height: 1000px;
+    }
+    ul {
+        max-height: 120px;
+    }
 }
 
 /* Header Section */
@@ -42,10 +48,18 @@
     background-color: #A50000;
     border-radius: 5px;
     border: 10px solid black;
+    max-height: 600px;
 }
 h1 {
     font-size: 48px;
     text-decoration: underline;
+}
+h2 {
+    text-align: left;
+}
+p {
+    margin: 0;
+    padding: 0;
 }
 .item_add {
     padding: 0.5em 0.75em 0.5em 0.75em;
@@ -54,9 +68,16 @@ h1 {
     text-align: left;
     font-size: 18px;
 }
-.add_button, .filter_button {
+.add_button {
     padding: 0.5em 0.75em 0.5em 0.75em;
     margin: 0 auto;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.filter_button {
+    padding: 0.5em 0.75em 0.5em 0.75em;
+    margin-bottom: 0.75em;
     width: 100%;
     border-radius: 5px;
     font-size: 18px;
@@ -70,6 +91,10 @@ h1 {
 ul {
     margin: 0;
     padding: 0;
+    overflow: scroll;
+    max-height: 160px;
+    /* Referenced from: https://codepen.io/mobify/pen/vLcky */
+    -webkit-overflow-scrolling: touch;
 }
 ul li {
     cursor: pointer;
