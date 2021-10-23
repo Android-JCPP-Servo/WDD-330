@@ -29,6 +29,9 @@ for (var i = 0; i < close.length; i++) {
         var div = this.parentElement;
         //...and set its visibility to hidden or none.
         div.style.display = "none";
+        // Remove selected item from localStorage
+        localStorage.removeItem(div);
+        console.log(localStorage);
     }
 }
 
@@ -81,6 +84,8 @@ function addItem() {
             var div = this.parentElement;
             //...and set its visibility to hidden or none.
             div.style.display = "none";
+            localStorage.removeItem(div);
+            console.log(localStorage);
         }
     }
     // console.log('Total All: ' + totalAll);
@@ -89,6 +94,16 @@ function addItem() {
     } else {
         document.getElementById("totals").innerHTML = totalAll + " tasks total.";
     }
+    // Store each added item to localStorage
+    storage(newItem);
+}
+
+// Function used to store list to localStorage
+function storage(item) {
+    var i;
+    window.localStorage.setItem(i, item);
+    console.log(localStorage);
+    i++;
 }
 
 // Filter each list item based on being checked off or not
