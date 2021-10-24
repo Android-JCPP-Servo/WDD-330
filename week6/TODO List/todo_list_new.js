@@ -26,8 +26,11 @@ todoForm.addEventListener('submit', function(event) {
 
 // Function to add item
 function addTodo(item) {
+    var alert = document.getElementById('alert');
     // If item is not empty...
     if (item !== '') {
+        // Remove alert message if already displayed
+        alert.style.visibility = 'hidden';
         // ...make a todo object, which has id(timestamp), name(string), and completed(Boolean) properties...
         const todo = {
             id: Date.now(),
@@ -40,6 +43,9 @@ function addTodo(item) {
         addToLocalStorage(todoList);
         // Finally clear the input box value
         itemInput.value = '';
+    } else {
+        // Display error message if user input is invalid or empty
+        alert.style.visibility = 'visible';
     }
     // Display array total
     countInArray();
