@@ -6,6 +6,8 @@
 var itemList = document.getElementsByTagName('LI');
 var totalAll = 0;
 
+localStorage.clear();
+
 // Create a "close" button and append it to each list item
 for (var i = 0; i < itemList.length; i++) {
     // @param tagName — The name of an element.
@@ -96,15 +98,26 @@ function addItem() {
     }
     // Store each added item to localStorage
     storage(newItem);
+    console.log(getFromLocalStorage());
 }
 
 // Function used to store list to localStorage
+var i = 0;
 function storage(item) {
-    var i;
-    window.localStorage.setItem(i, item);
+    var message = "Number " + i;
+    window.localStorage.setItem(message, JSON.stringify(item));
     console.log(localStorage);
     i++;
 }
+
+function getFromLocalStorage() {
+    // var message = "Number " + i;
+    localStorage.getItem("Number 0");
+    console.log(localStorage);
+    // i++;
+}
+
+console.log(getFromLocalStorage());
 
 // Filter each list item based on being checked off or not
 // Display all items
@@ -148,7 +161,7 @@ function filterCompletedData() {
         }
     }
     //console.log('Total completed: ' + totalCompleted);
-    if (totalCompleted <= 1) {
+    if (totalCompleted == 1) {
         document.getElementById("totals").innerHTML = totalCompleted + " task completed.";
     } else {
         document.getElementById("totals").innerHTML = totalCompleted + " tasks completed.";

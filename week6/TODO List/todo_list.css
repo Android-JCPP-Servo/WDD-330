@@ -99,7 +99,7 @@ ul {
 ul li {
     cursor: pointer;
     position: relative;
-    padding: 12px 8px 12px 40px;
+    padding: 12px 12px;
     list-style-type: none;
     background:#eeeeee;
     font-size: 18px;
@@ -127,7 +127,7 @@ ul li.checked {
     text-decoration: line-through;
 }
 /* Add a "checked" mark when clicked on */
-ul li.checked::before {
+/* ul li.checked::before {
     content: '';
     position: absolute;
     border-color: #fff;
@@ -138,7 +138,7 @@ ul li.checked::before {
     transform: rotate(45deg);
     height: 15px;
     width: 7px;
-}
+} */
 /* Style the close button */
 .close {
     position: absolute;

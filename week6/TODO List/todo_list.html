@@ -17,14 +17,14 @@
             <div class="row">
                 <div class="col-12">
                     <h1>To-Do List</h1>
-                    <div class="row">
+                    <form class="row todo_form">
                         <div class="col-9">
                             <input type="text" class="item_add" id="item_add" placeholder="Enter task here...">
                         </div>
                         <div class="col-3">
-                            <button class="add_button" onClick="addItem()">Add</button>
+                            <button class="add_button" type="submit">Add</button>
                         </div>
-                    </div>
+                    </form>
                     <div class="row">
                         <p id="alert">* You must enter something. *</p>
                     </div>
@@ -39,7 +39,7 @@
                     <p id="totals">0 Tasks Total.</p>
                 </div>
                 <div class="col-9">
-                    <h2>Tasks</h2>
+                    <h2>Tasks (Check when complete)</h2>
                     <ul class="todo_items" id="todo_items">
                     </ul>
                 </div>
@@ -51,5 +51,5 @@
         <p>&copy 2021 Andersen Stewart | WDD 330 | TODO List</p>
     </div>
 </body>
-<script src="todo_list.js"></script>
+<script src="todo_list_new.js"></script>
 </html>
