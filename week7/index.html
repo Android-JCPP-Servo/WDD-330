@@ -5,33 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../page_layout.css" media="screen">
-    <title>Ajax Example</title>
+    <title>Document</title>
 </head>
 <body>
     <div class="header">
-        <a href="../index.html"><img src="../images/back_arrow.png" alt="Back"> Week 7 Assignment Index</a>
-        <h1>AJAX Number Fact / Chuck Norris Assignment</h1>
+        <a href="../index.html"><img src="../images/back_arrow.png" alt="Back"> WDD 330 Portfolio</a>
+        <h1>Week 7 Assignment Index</h1>
     </div>
     <div class="row">
         <div class="col-3">
-            <h2>Press A Button!</h2>
-            <p>Press either button to see an intriguing number fact or a hysterical Chuck Norris joke.</p>
+            <h3>Number Fact / Chuck Norris Jokes</h3>
             <ul class="buttons">
-                <li><a id="number">Number Fact</a></li>
-                <li><a id="chuck">Chuck Norris Joke</a></li>
+                <li><a href="./ajax.html">AJAX Number Fact / Chuck Norris Joke HTML</a></li>
+                <li><a href="./main.js">AJAX Number Fact / Chuck Norris Joke JS</a></li>
             </ul>
         </div>
-        <div class="col-6">
-            <h2>Facts Shown Here:</h2>
-            <div id="output">
-                Ajax response will appear here.
-            </div>
+        <div class="col-5">
+            <h3>Descriptions</h3>
+            <ul class="lists">
+                <li>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <h3>This Week's Highlights</h3>
         </div>
     </div>
     <div class="footer">
         <p>&copy <span id="year"></span> Andersen Stewart | WDD 330 | Week 07</p>
     </div>
     <script>document.getElementById('year').innerHTML = new Date().getFullYear();</script>
-    <script src="main.js"></script>
 </body>
 </html>

@@ -40,7 +40,8 @@
         </div>
     </div>
     <div class="footer">
-        <p>&copy 2021 Andersen Stewart | WDD 330 | Week 05</p>
+        <p>&copy <span id="year"></span> Andersen Stewart | WDD 330 | Week 05</p>
     </div>
+    <script>document.getElementById('year').innerHTML = new Date().getFullYear();</script>
 </body>
 </html>
