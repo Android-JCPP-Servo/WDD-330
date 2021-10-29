@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../page_layout.css" media="screen">
-    <title>Document</title>
+    <title>Week07 Index</title>
 </head>
 <body>
     <div class="header">
@@ -24,12 +24,27 @@
             <h3>Descriptions</h3>
             <ul class="lists">
                 <li>
-                    
+                    <i>AJAX FACTS & JOKES</i> - This program relies on AJAX to call different facts and 
+                    jokes from external sources. Through an event-listener, the AJAX methods fetch API data 
+                    from external websites, display a "Waiting for response..." message, and then return 
+                    one of two results: 1) an error message indicating what error occurred, or 2) a random 
+                    string called from the external website.
                 </li>
+                <ul>
+                    <li>
+                        If a fact is returned from the Number Facts API, the response is returned as a string 
+                        of text.
+                    </li>
+                    <li>
+                        If a joke is returned from the Chuck Norris API, the response is returned as a JSON 
+                        string.
+                    </li>
+                </ul>
             </ul>
         </div>
         <div class="col-4">
             <h3>This Week's Highlights</h3>
+            <img src="../images/chuck_norris.jpg" alt="Chuck Norris" class="highlight-photo"/>
         </div>
     </div>
     <div class="footer">
