@@ -1,0 +1,49 @@
+/* Font Type and Insertion */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Table Details */
+#display > td {
+    cursor: pointer;
+}
+#display > thead {
+    background-color: lightgray;
+}
+#display > tr {
+    border: 1px solid black;
+    padding: 0.5em;
+    height: 44px;
+}
+#display > tr:nth-child(even) {
+    background-color: azure;
+}
+#display > tr:hover {
+    background-color: bisque;
+    text-decoration: underline;
+}
+
+/* Hidden Tables */
+.hidden {
+    display: none;
+}
+#details {
+    flex: 1 0 15em;
+    padding: 1em;
+    text-align: center;
+    border: 2px solid black;
+}
+#details > dl {
+    border: 1px solid black;
+    text-align: left;
+}
