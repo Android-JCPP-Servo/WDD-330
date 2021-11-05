@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../page_layout.css" media="screen">
+    <title>Week 8 Notes</title>
+</head>
+<body>
+    <div class="header">
+        <a href="../index.html"><img src="../images/back_arrow.png" alt="Back"> WDD 330 Portfolio</a>
+        <h1>Week 8 Notes Page</h1>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <h2>Note Titles</h2>
+            <h3>Chapter 8: Transforms and Transitions</h3>
+        </div>
+        <div class="col-5">
+            <h2>Notes</h2>
+            <p>Chapter 8</p>
+            <ul class="lists">
+                <li>Transforms and transitions are used to diversify the appearance of a webpage.</li>
+                <li>
+                    Many older web browsers use techniques that are similar to transforms and transitions, 
+                    but the processes to create such details required a great deal of CSS and JavaScript.</li>
+                </li>
+                <li>
+                    To simplify the process of creating moveable pictures and text, CSS3 was created and 
+                    implemented transformations and transitions.
+                </li>
+                <li>
+                    If a developer wanted something to move, adjust positioning, or change color on a mouse-hover, 
+                    the developer could use CSS3's new capabilities to achieve such goals.
+                </li>
+                <li>
+                    Additionally, and based on personal experience, transforms and transitions can be used 
+                    to fix an object's position on the screen. Instead of using "top:" (or "bottom:") and 
+                    "left:" (or "right:"), a transform can be used to establish the exact same positioning 
+                    (i.e. "transform: (50px, -50px);")
+                </li>
+                <li>
+                    CSS3 transforms and transitions not only reduced the amount of code needed to adjust a 
+                    picture, but also simplified the coordinate system and provided new special effects for developers.
+                </li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <h2>Photos</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <h3>Chapter 12: Canvas, SVG, and Drag and Drop</h3>
+        </div>
+        <div class="col-5">
+            <p>Chapter 12</p>
+            <ul class="lists">
+                <li>Canvas is much similar to an artist's paint canvas, except in a digital manner.</li>
+                <li>
+                    When a developer uses Canvas, they are achieving a similar result to creating a shape 
+                    in a separate platform, like Inkscape.
+                </li>
+                <li>
+                    SVG images are files of code that can be used in multiple pages at once, much like a 
+                    single JavaScript file called multiple times by different individual HTML files.
+                </li>
+                <li>
+                    The developer has three ways of creating and displaying SVG images:
+                    <ol class="lists" style="padding-top: 10px;">
+                        <li>
+                            Find a picture online, download it as an SVG, and then save the code in a file 
+                            uploaded to a platform, such as Visual Studio Code.
+                        </li>
+                        <li>
+                            Draw a picture in Inkscape, save it, download its SVG code, and then upload it to 
+                            VS Code.
+                        </li>
+                        <li>
+                            Using Sketch.app:
+                            <ol class="lists" style="padding-top: 10px;">
+                                <li>Upload photos or text to a document</li>
+                                <li>Right-click on the image</li>
+                                <li>Click "Copy SVG Code"</li>
+                                <li>Paste the code to a file</li>
+                                <li>Upload the file to VS Code</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>Finally, Drag and Drop gives the user the ability to move objects with their cursor.</li>
+                <li>
+                    Users can either drag and drop files from their computer to their browser 
+                    (i.e. "Upload Document(s) Here"), or objects from one part of the browser to another part 
+                    (i.e. an interactive gaming website).
+                </li>
+                <li>
+                    Several ways can be used to implement Drag and Drop:
+                    <ol class="lists" style="padding-top: 10px;">
+                        <li>"Set the draggable attribute on any HTML elements you'd like to be draggable.</li>
+                        <li>"Add an event listener for the dragstart event on any draggable elements.</li>
+                        <li>
+                            Add an event listener for the dragover and drop events on any elements that you want 
+                            to have accept dropped items.
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="footer">
+        <p>&copy <span id="year"></span> Andersen Stewart | WDD 330 | Week 07</p>
+    </div>
+    <script src="../year.js"></script>
+</body>
+</html>
