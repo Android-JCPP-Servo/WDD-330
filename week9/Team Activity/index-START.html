@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
+  <script>
+    document.addEventListener('keydown', (event) => {
+      switch (event.keyCode) {
+        case 65:
+          console.log("Entered! A");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="65"]')) {
+              console.log("Sound!");
+              elem.play();
+              console.dir(elem);
+            }
+          }
+          for (let elem2 of document.body.children) {
+            if (elem2.matches('div[data-key$="65"]')) {
+              console.log(elem2);
+              elem2.classList.add("playing");
+            }
+          }
+          break;
+        case 83:
+          console.log("Entered! S");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="83"]')) {
+              console.log("Sound!");
+              elem.play();
+            }
+          }
+          break;
+        case 68:
+          console.log("Entered! D");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="68"]')) {
+              console.log("Sound!");
+              elem.play();
+            }
+          }
+          break;
+        case 70:
+          console.log("Entered! F");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="70"]')) {
+              console.log("Sound!");
+              elem.play();
+            }
+          }
+          break;
+        case 71:
+          console.log("Entered! G");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="71"]')) {
+              console.log("Sound!");
+              elem.play();
+            }
+          }
+          break;
+        case 72:
+          console.log("Entered! H");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="72"]')) {
+              console.log("Sound!");
+              elem.play();
+            }
+          }
+          break;
+        case 74:
+          console.log("Entered! J");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="74"]')) {
+              console.log("Sound!");
+              elem.play();
+            }
+          }
+          break;
+        case 75:
+          console.log("Entered! K");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="75"]')) {
+              console.log("Sound!");
+              elem.play();
+            }
+          }
+          break;
+        case 76:
+          console.log("Entered! L");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="76"]')) {
+              console.log("Sound!");
+              elem.play();
+            }
+          }
+          break;
+      }
+    }, false);
+
+    document.addEventListener('keyup', (event) => {
+      switch (event.keyCode) {
+        case 65:
+          console.log("Entered! A");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="65"]')) {
+              elem.pause();
+              elem.currentTime = 0;
+              console.log("Stopped!");
+            }
+          }
+          break;
+        case 83:
+          console.log("Entered! S");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="83"]')) {
+              elem.pause();
+              elem.currentTime = 0;
+              console.log("Stopped!");
+            }
+          }
+          break;
+        case 68:
+          console.log("Entered! D");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="68"]')) {
+              elem.pause();
+              elem.currentTime = 0;
+              console.log("Stopped!");
+            }
+          }
+          break;
+        case 70:
+          console.log("Entered! F");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="70"]')) {
+              elem.pause();
+              elem.currentTime = 0;
+              console.log("Stopped!");
+            }
+          }
+          break;
+        case 71:
+          console.log("Entered! G");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="71"]')) {
+              elem.pause();
+              elem.currentTime = 0;
+              console.log("Stopped!");
+            }
+          }
+          break;
+        case 72:
+          console.log("Entered! H");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="72"]')) {
+              elem.pause();
+              elem.currentTime = 0;
+              console.log("Stopped!");
+            }
+          }
+          break;
+        case 74:
+          console.log("Entered! J");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="74"]')) {
+              elem.pause();
+              elem.currentTime = 0;
+              console.log("Stopped!");
+            }
+          }
+          break;
+        case 75:
+          console.log("Entered! K");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="75"]')) {
+              elem.pause();
+              elem.currentTime = 0;
+              console.log("Stopped!");
+            }
+          }
+          break;
+        case 76:
+          console.log("Entered! L");
+          for (let elem of document.body.children) {
+            if (elem.matches('audio[data-key$="76"]')) {
+              elem.pause();
+              elem.currentTime = 0;
+              console.log("Stopped!");
+            }
+          }
+          break;
+      }
+    }, false);
+  </script>
+</body>
+</html>
