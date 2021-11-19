@@ -1,47 +1,55 @@
 import { getJSON, getLocation } from "./utilities.js";
 
-// function getJSON(url) {
-//     return fetch(url)
-//     .then(function(response) {
-//         if (!response.ok) {
-//             throw Error(response.statusText);
-//         } else {
-//             return response.json();
-//         }
-//     })
-//     .catch(function(error) {
-//         console.log(error);
-//     });
-// }
-
-// const getLocation = function(options) {
-//     return new Promise(function(resolve, reject) {
-//         navigator.geolocation.getCurrentPosition(resolve, reject, options);
-//     });
-// };
-
 const baseUrl =
   "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2020-01-01&endtime=2020-02-02";
 
 let quakes = [];
 
+async function showQuakes() {
+    // get the current location
+    const location = await initPos();
+    // get the list of quakes for the location
+    quakes = await getQuakesForLocation(location);
+    // render the list to the list element
+    const listElement = document.querySelector("#quakeList");
+    listElement.innerHTML = generateListMarkup(
+      quakes.features,
+      earthquakeListTemplate
+    );
+  
+    // attach a listener to the quakes that will listen for a click and render out details about the quake
+    listElement.addEventListener("click", earthQuakeClickHandler);
+}
+
+function initPos() {
+    // get location
+    let locResp = await getLocation();
+    // take a look at where the information we need is in the returned object
+    console.log(locResp);
+    // we really only need the coords portion
+    const location = locResp.coords;
+    return location;
+}
+
+function getQuakesForLocation(location) {
+    // build out the url with the location
+    const radius = 100;
+    const query =
+      baseUrl +
+      `&latitude=${location.latitude}&longitude=${location.longitude}&maxradiuskm=${radius}`;
+    console.log(query);
+    // fetch the data
+    quakes = await getJSON(query);
+    return quakes;
+}
+
+function generateListMarkup(list, templateCallback) {
+    
+}
+
 // this function works...but is doing way too much. Large functions like this tend to be brittle and hard to maintain and test
 // a function should do one thing and do it well. Not everything!
 async function everything() {
-  // get location
-  let locResp = await getLocation();
-  // take a look at where the information we need is in the returned object
-  console.log(locResp);
-  // we really only need the coords portion
-  const location = locResp.coords;
-  // build out the url with the location
-  const radius = 100;
-  const query =
-    baseUrl +
-    `&latitude=${location.latitude}&longitude=${location.longitude}&maxradiuskm=${radius}`;
-  console.log(query);
-  // fetch the data
-  quakes = await getJSON(query);
   // get the element we will render the list in
   const listElement = document.querySelector("#quakeList");
   // render the list of quakes
