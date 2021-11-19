@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="page_layout.css">
+    <link rel="stylesheet" href="../page_layout.css">
     <title>Home | WDD-330</title>
 </head>
 <body>
@@ -13,9 +13,60 @@
     </div>
     <div class="row">
         <div class="col-3">
-            <h2>Week Blocks</h2>
+            <h2>Week Assignments</h2>
+            <h3>Team Activity - Quakes</h3>
             <ul class="buttons">
                 <li><a href="./Team Activity/quakes.html">Quakes</a></li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <h2>Notes</h2>
+            <ul class="lists">
+                <h3>Validating Forms:</h3>
+                <li>
+                    There are several different methods for client-side validation, 
+                    ranging anywhere from simply requiring user input to preventing 
+                    form submission until all inputs are filled <i>and</i> match the 
+                    requested input-pattern.
+                </li>
+                <li>
+                    When requiring user input for a textbox, the <b>required</b> 
+                    attribute must be used. For example:
+                    <ul class="lists">
+                        <li style="padding: 10px 0;">
+                            <!--Tag parts referenced from: https://stackoverflow.com/questions/6817262/how-to-display-html-tags-as-plain-text#:~:text=348,and%20%3E%20with%20%26gt%3B.-->
+                            &ltinput type="text" placeholder="Enter some text" <b>required</b>&gt
+                        </li>
+                    </ul>
+                    This will <i>help</i> prevent form submission until this textbox is filled, 
+                    but will not ultimately prevent hackers from submitting a form. Other measures 
+                    should be taken to perform such a prevention.
+                </li>
+                <li>
+                    Further measures that can be taken for form-submission security are:
+                    <ol class="lists">
+                        <li style="padding-top: 10px;">
+                            Constraining the length of your entries (i.e., "minlength='6' maxlength='6'")
+                        </li>
+                        <li>
+                            Constraining the values of your entries (i.e., value="1" min="1" max="10")
+                        </li>
+                        <li>
+                            The Constraint Validation API (i.e., 'validationMessage', 'validity', 'checkValidity()', etc.)
+                        </li>
+                        <li>
+                            Implementing a customized error message (i.e.,<br>
+                                &emsp;if (email.validity.typeMismatch) {<br>
+                                &emsp;&emsp;email.setCustomValidity("I am expecting an e-mail address!");<br>
+                                &emsp;})
+                        </li>
+                        <li>...and so on.</li>
+                    </ol>
+                </li>
+                <li>
+                    When these actions are taken, we effectively prevent any hackers from sending dangerous malware to our web server, 
+                    thus protecting ourselves and any visitors who wish to view or participate in our website.
+                </li>
             </ul>
         </div>
     </div>
