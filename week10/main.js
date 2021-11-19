@@ -52,9 +52,3 @@ async function everything() {
     });
 }
 everything();
-
-// function testGetQuakesForLocation() {
-//     getLocation
-// }
-
-// getQuakesForLocation();

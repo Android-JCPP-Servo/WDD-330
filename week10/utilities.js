@@ -1,5 +1,5 @@
 export function getJSON(url) {
-    fetch(url)
+    return fetch(url)
     .then(response => {
         if (response.ok) {
             console.log("Entered!");
