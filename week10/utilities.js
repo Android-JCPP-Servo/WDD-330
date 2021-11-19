@@ -4,6 +4,7 @@ export function getJSON(url) {
     fetch(url)
     .then(response => {
         if (response.ok) {
+            console.log("Entered!");
             return response.json();
         } throw Error(response.statusText);
     })

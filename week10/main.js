@@ -20,6 +20,7 @@ async function everything() {
     console.log(query);
     // fetch the data
     quakes = getJSON(query);
+    console.log(quakes);
     // get the element we will render the list in
     const listElement = document.querySelector("#quakeList");
     // render the list of quakes
