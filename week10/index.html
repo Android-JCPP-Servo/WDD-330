@@ -12,62 +12,100 @@
         <h1>Andersen Stewart's WDD 330 Portfolio</h1>
     </div>
     <div class="row">
-        <div class="col-3">
+        <div class="col-2">
             <h2>Week Assignments</h2>
             <h3>Team Activity - Quakes</h3>
             <ul class="buttons">
                 <li><a href="./Team Activity/quakes.html">Quakes</a></li>
             </ul>
         </div>
-        <div class="col-4">
+        <div class="col-5">
             <h2>Notes</h2>
-            <ul class="lists">
-                <h3>Validating Forms:</h3>
-                <li>
-                    There are several different methods for client-side validation, 
-                    ranging anywhere from simply requiring user input to preventing 
-                    form submission until all inputs are filled <i>and</i> match the 
-                    requested input-pattern.
-                </li>
-                <li>
-                    When requiring user input for a textbox, the <b>required</b> 
-                    attribute must be used. For example:
-                    <ul class="lists">
-                        <li style="padding: 10px 0;">
-                            <!--Tag parts referenced from: https://stackoverflow.com/questions/6817262/how-to-display-html-tags-as-plain-text#:~:text=348,and%20%3E%20with%20%26gt%3B.-->
-                            &ltinput type="text" placeholder="Enter some text" <b>required</b>&gt
-                        </li>
-                    </ul>
-                    This will <i>help</i> prevent form submission until this textbox is filled, 
-                    but will not ultimately prevent hackers from submitting a form. Other measures 
-                    should be taken to perform such a prevention.
-                </li>
-                <li>
-                    Further measures that can be taken for form-submission security are:
-                    <ol class="lists">
-                        <li style="padding-top: 10px;">
-                            Constraining the length of your entries (i.e., "minlength='6' maxlength='6'")
-                        </li>
-                        <li>
-                            Constraining the values of your entries (i.e., value="1" min="1" max="10")
-                        </li>
-                        <li>
-                            The Constraint Validation API (i.e., 'validationMessage', 'validity', 'checkValidity()', etc.)
-                        </li>
-                        <li>
-                            Implementing a customized error message (i.e.,<br>
-                                &emsp;if (email.validity.typeMismatch) {<br>
-                                &emsp;&emsp;email.setCustomValidity("I am expecting an e-mail address!");<br>
-                                &emsp;})
-                        </li>
-                        <li>...and so on.</li>
-                    </ol>
-                </li>
-                <li>
-                    When these actions are taken, we effectively prevent any hackers from sending dangerous malware to our web server, 
-                    thus protecting ourselves and any visitors who wish to view or participate in our website.
-                </li>
-            </ul>
+            <div style="margin-top: 10px; border-right: 1px solid #ccc; padding-right: 30px;">
+                <ul class="lists">
+                    <h3>Validating Forms:</h3>
+                    <li>
+                        There are several different methods for client-side validation, 
+                        ranging anywhere from simply requiring user input to preventing 
+                        form submission until all inputs are filled <i>and</i> match the 
+                        requested input-pattern.
+                    </li>
+                    <li>
+                        When requiring user input for a textbox, the <b>required</b> 
+                        attribute must be used. For example:
+                        <ul class="lists">
+                            <li style="padding: 10px 0;">
+                                <!--Tag parts referenced from: https://stackoverflow.com/questions/6817262/how-to-display-html-tags-as-plain-text#:~:text=348,and%20%3E%20with%20%26gt%3B.-->
+                                &ltinput type="text" placeholder="Enter some text" <b>required</b>&gt
+                            </li>
+                        </ul>
+                        This will <i>help</i> prevent form submission until this textbox is filled, 
+                        but will not ultimately prevent hackers from submitting a form. Other measures 
+                        should be taken to perform such a prevention.
+                    </li>
+                    <li>
+                        Further measures that can be taken for form-submission security are:
+                        <ol class="lists">
+                            <li style="padding-top: 10px;">
+                                Constraining the length of your entries (i.e., "minlength='6' maxlength='6'")
+                            </li>
+                            <li>
+                                Constraining the values of your entries (i.e., value="1" min="1" max="10")
+                            </li>
+                            <li>
+                                The Constraint Validation API (i.e., 'validationMessage', 'validity', 'checkValidity()', etc.)
+                            </li>
+                            <li>
+                                Implementing a customized error message (i.e.,<br>
+                                    &emsp;if (email.validity.typeMismatch) {<br>
+                                    &emsp;&emsp;email.setCustomValidity("I am expecting an e-mail address!");<br>
+                                    &emsp;})
+                            </li>
+                            <li>...and so on.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        When these actions are taken, we effectively prevent any hackers from sending dangerous malware to our web server, 
+                        thus protecting ourselves and any visitors who wish to view or participate in our website.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-5">
+            <h2>Notes Continued...</h2>
+            <div style="margin-top: 10px; padding-right: 30px;">
+                <ul class="lists">
+                    <h3>Using Fetch:</h3>
+                    <li>
+                        Fetch serves as a way to call data from an API platform or pipeline, serving 
+                        as the replacement for XMLHTTPRequest. While XMLHTTPRequest is still available 
+                        for use, Fetch API methods are much simpler to use and provide more flexibility.
+                    </li>
+                    <li>
+                        A simple Fetch statement is written as follows:<br>
+                        <p>
+                            &emsp;fetch('http://example.com/movies.json')<br>
+                            &emsp;.then(response => response.json())<br>
+                            &emsp;.then(data => console.log(data));
+                        </p>
+                        This method simply fetches data from an existing API object, returns a response object 
+                        in JSON format, and then displays the resulting data to the console.
+                    </li>
+                    <li>
+                        Fetch methods can also upload files through the method <b>PUT</b>. Basically, the user 
+                        needs to provide form data, a username, and an avatar to upload files. Once this information 
+                        is provided, the upload method will push the file as well as display a success or failure message, 
+                        dependent on the file being sent or not.
+                    </li>
+                    <li>
+                        For unsupporting browsers, Fetch has a method called Fetch Polyfill, which basically fulfills the 
+                        same purposes as standard Fetch methods. According to 
+                        <a href="https://github.com/github/fetch" style="color: blue;">romainmenke and JakeChampion</a>, 
+                        "[Polyfill is a project] that implements a subset of the standard Fetch specification, enough 
+                        to make fetch a viable replacement for most uses of XMLHttpRequest in traditional web applications."
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="footer">
