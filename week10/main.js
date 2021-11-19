@@ -1,16 +1,17 @@
 // import { getJSON, getLocation } from "./utilities.js";
 
-async function getJSON(url) {
-    try {
-        const response = await fetch(url);
+function getJSON(url) {
+    return fetch(url)
+    .then(function(response) {
         if (!response.ok) {
             throw Error(response.statusText);
         } else {
             return response.json();
         }
-    } catch (error) {
+    })
+    .catch(function(error) {
         console.log(error);
-    }
+    });
 }
 
 const getLocation = function(options) {
